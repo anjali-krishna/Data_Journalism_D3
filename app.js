@@ -116,9 +116,6 @@ d3.csv("data/data.csv", function(error, corrData){
                                         .text(function(d){
                                             return d.abbr
                                         });
-                
-
-
     // Initialize tool tip
     var toolTip = d3.tip()
                     .attr("class", "tooltip")
