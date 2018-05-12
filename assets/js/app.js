@@ -1,5 +1,8 @@
+// D3 Scatterplot Assignment
+// Create a scatter plot with D3.js.
+
 // Define SVG area dimensions
-var svgWidth = 960;
+var svgWidth = 810;
 var svgHeight = 500;
 
 // Define the chart's margins as an object
@@ -100,7 +103,7 @@ d3.csv("data/data.csv", function(error, corrData){
                                  .attr("fill", "lightblue")
                                  .attr("opacity", ".75")
                                 
-                        circlesGroup.append("text")
+                          chartGroup.append("text")
                                     .style("text-anchor","middle")
                                     .style("font-size","12px")
                                     .selectAll("tspan")
@@ -108,10 +111,10 @@ d3.csv("data/data.csv", function(error, corrData){
                                     .enter()
                                     .append("tspan")
                                         .attr("x", function (d) {
-                                            return xLinearScale(d.poverty-0);
+                                            return xLinearScale(d.poverty);
                                         })
                                         .attr("y", function (d) {   
-                                            return yLinearScale(d.education-0.2);
+                                            return yLinearScale(d.education-0.1);
                                         })
                                         .text(function(d){
                                             return d.abbr
@@ -143,10 +146,10 @@ d3.csv("data/data.csv", function(error, corrData){
               .attr("x", 0 - (chartHeight / 2))
               .attr("dy", "1em")
               .attr("class", "axisText")
-              .text("Education");
+              .text("Education (%)");
 
     chartGroup.append("text")
               .attr("transform", `translate(${chartWidth/2}, ${chartHeight + margin.top + 30})`)
               .attr("class", "axisText")
-              .text("Poverty");
+              .text("In Poverty (%)");
 });

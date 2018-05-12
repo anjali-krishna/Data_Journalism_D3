@@ -1,4 +1,5 @@
-.tooltip {
+/* Add styling to d3 chart. */
+ .tooltip {
     position: absolute;
     width: 135px;
     height: 60px;
@@ -17,3 +18,4 @@
     fill: #1b0204;
     text-anchor: middle;
   }
+
