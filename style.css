@@ -1,0 +1,19 @@
+.tooltip {
+    position: absolute;
+    width: 135px;
+    height: 60px;
+    padding: 2px;
+    padding-top: 8px;
+    font: 12px 'Franklin Gothic Medium';
+    color: white;
+    text-align: center;
+    background: lightcoral;
+    border: 0;
+    border-radius: 10px;
+  }
+  .axisText {
+    font-family: 'Franklin Gothic Medium';
+    font-weight: bold;
+    fill: #1b0204;
+    text-anchor: middle;
+  }
